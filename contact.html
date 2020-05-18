@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Book House | Contact</title>
+		<link rel="stylesheet" href="themes/style.css">
+
+		<script>
+			function checkforblank(){
+				if(document.getElementById('name').value == ""){
+					alert('Please enter your name.');
+					document.getElementById("name").style.backgroundColor = red;
+					return false;
+				}
+				if(document.getElementById('email').value == ""){
+					alert('Please enter your email.');
+					document.getElementById("email").style.borderColor = red;
+					return false;
+				}
+				if(document.getElementById('message').value == ""){
+					alert('Please enter your message.');
+					document.getElementById("message").style.borderColor = red;
+					return false;
+				}
+				else{
+					alert('Successful');
+				}
+			}
+		</script>
+
+
+	</head>
+
+
+	<body>
+		
+		<div id="site-content">
+			
+			<header class="site-header">
+				<div class="container">
+					<a href="index.html" id="branding">
+						<img src="images/logo.png" alt="Company Name" class="logo">
+					</a>
+
+					<nav class="main-navigation">
+					
+						<ul class="menu">
+							<li class="menu-item"><a href="index.html">Home</a></li>
+							<li class="menu-item"><a href="service.html">Service</a></li>
+							<li class="menu-item current-menu-item"><a href="contact.html">Contact</a></li>
+						</ul>
+					</nav>
+				</div>
+			</header>
+
+			<main class="main-content">
+				
+				<div class="fullwidth-block content">
+					<div class="container">
+						<h2 class="entry-title">Contact with us</h2>
+
+						<div class="row contact-info">
+							<div class="col-md-6">
+								<div class="map-container">
+									<div class="map"></div>
+									<div class="row">
+										<div class="col-md-4">
+											<address>
+												<strong>Address</strong>
+												<p>Book House <br>Turkey <br>Kucukcekmece, Istanbul<br>Orkun Manap</p>
+											</address>
+										</div>
+										<div class="col-md-8">
+											<div class="contact">
+												<strong>Contact</strong>
+												<p>
+													<a href="tel:5355555555">(535) 555 55 55</a>
+													<a href="mailto:office@plusone.com">office@bookhouse.com</a> <br>
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-5 col-md-offset-1">
+								<form action="#" class="contact-form" onsubmit="checkforblank()">
+									<input type="text" id="name" placeholder="Name">
+									<input type="text" id="email" placeholder="Email">
+									<textarea name="" id="message" placeholder="Message"></textarea>
+									<div class="text-right">
+										<input type="submit" value="Send message">
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</main> 
+		
+	</body>
+
+</html>
