@@ -1,5 +1,5 @@
 <?php
-$server="localhost:81";
+$server="localhost:8080";
 $con=mysqli_connect($server,"root","","bookhouse");
 if(mysqli_connect_errno())
 {

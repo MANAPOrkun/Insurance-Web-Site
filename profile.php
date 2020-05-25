@@ -6,8 +6,6 @@ if(!isset($_SESSION['email']))
     exit();
 }
  
-
-// Check if the user is logged in, if not then redirect him to login page
 if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     header("location: index.html");
     exit;
@@ -57,7 +55,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     <body>
        
         <div class="card">
-            <img src="images/profile.png" alt="Profile" style="width:100%">
+            <img src=<?php echo $_SESSION['avatar'];?> alt="Profile" style="width:100%">
             <h1 style = " color: #4CAF50;"><?php echo $_SESSION['username'];?>  <?php echo $_SESSION['usersurname'];?></h1>
             <p class="title"><?php echo $_SESSION['email'];?></p>
             <p class="title"><?php echo $_SESSION['phone'];?></p>

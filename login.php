@@ -9,7 +9,7 @@ if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
 if(isset($_POST['login-btn']))
 {
 
-	$connection = mysqli_connect('localhost:81', 'root', '', 'bookhouse');
+	$connection = mysqli_connect('localhost', 'root', '', 'bookhouse');
 
 
     $username=stripslashes($_REQUEST['email']);
@@ -29,12 +29,15 @@ if(isset($_POST['login-btn']))
 		$_SESSION['email']=$username;
 		$_SESSION['username']=$fetched["username"];
 		$_SESSION['usersurname']=$fetched["usersurname"];
+		$_SESSION['avatar']=$fetched["avatar"];
 		$_SESSION['phone']=$fetched["phone"];
 		$_SESSION['loggedin']=true;
         header("location:profile.php");
     }
     else{
-        echo "<h3> Username/password is incorrect. </h3>";
+        echo '<script language="javascript">';
+		echo 'alert("Email or password is not correct. Please enter again.")';
+		echo '</script>';
     
     }
 } else{}
